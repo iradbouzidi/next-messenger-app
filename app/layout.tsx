@@ -1,7 +1,5 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import ToasterContext from "./context/ToasterContext";
 
 export const metadata = {
   title: "Messenger Clone App",
@@ -15,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <ToasterContext />
+        {children}
+      </body>
     </html>
   );
 }
