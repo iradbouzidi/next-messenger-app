@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint": "eslint . --ext .vue,.js,.mjs,.cjs,.ts,.jsx,.tsx --ignore-path .gitignore",
+    "lint:fix": "eslint . --ext .vue,.js,.mjs,.cjs,.ts,.jsx,.tsx --ignore-path .gitignore --fix"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.7",
@@ -21,7 +24,7 @@
     "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
     "clsx": "^1.2.1",
-    "eslint": "8.41.0",
+    "eslint": "^8.41.0",
     "eslint-config-next": "13.4.4",
     "next": "13.4.4",
     "next-auth": "^4.22.1",
